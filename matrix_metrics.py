@@ -1,4 +1,17 @@
 def confusion_matrix_metrics(tp, fp, tn, fn, bagging=False):
+  """Calculates confusion matrix metrics
+    Parameters:
+    - tp (int): true positive value
+    - fp (int): false positive value
+    - tn (int): true negative value
+    - fn (int): false negative value
+    - bagging (bool): flag for whether matrix is from bagging
+    Returns:
+    (string): accuracy
+    (string): precision
+    (string): recall
+    (string): f1
+    (string): spec """
   accuracy = (tp+tn)/(tp+fp+tn+fn)*100
   precision = tp/(tp+fp)
   recall = tp/(tp+fn)
