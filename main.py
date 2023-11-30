@@ -15,6 +15,8 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.inspection import DecisionBoundaryDisplay
 from sklearn.ensemble import AdaBoostClassifier
 
+# Helper function
+from matrix_metric.py import confusion_matrix_metrics
 
 # Importing data
 
