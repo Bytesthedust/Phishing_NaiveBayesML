@@ -14,6 +14,7 @@ from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay, roc_curve,
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.inspection import DecisionBoundaryDisplay
 from sklearn.ensemble import AdaBoostClassifier
+from sklearn.model_selection import cross_val_score
 
 # Helper function
 from matrix_metric.py import confusion_matrix_metrics
@@ -150,7 +151,7 @@ roc_auc = roc_auc_score(BY_test, BY_pred)
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
 
 # Confusion Matrix subplot
-cmatrix = ConfusionMatrixDisplay.from_predictions(NY_test, NY_pred, ax=ax1)
+cmatrix = ConfusionMatrixDisplay.from_predictions(BY_test, BY_pred, ax=ax1)
 ax1.set_title('Bootstrap Confusion Matrix')
 fpr, tpr, thresholds = roc_curve(BY_test, BY_pred)
 roc_auc = roc_auc_score(BY_test, BY_pred)
@@ -207,10 +208,10 @@ roc_auc = roc_auc_score(AY_test, AY_pred)
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
 
 # Confusion Matrix subplot
-cmatrix = ConfusionMatrixDisplay.from_predictions(NY_test, NY_pred, ax=ax1)
+cmatrix = ConfusionMatrixDisplay.from_predictions(AY_test, AY_pred, ax=ax1)
 ax1.set_title('Ada Confusion Matrix')
-fpr, tpr, thresholds = roc_curve(BY_test, BY_pred)
-roc_auc = roc_auc_score(BY_test, BY_pred)
+fpr, tpr, thresholds = roc_curve(AY_test, AY_pred)
+roc_auc = roc_auc_score(AY_test, AY_pred)
 # ROC Curve subplot
 ax2.plot(fpr, tpr, label=f'ROC curve (AUC = {roc_auc:.2f})')
 ax2.plot([0, 1], [0, 1], 'k--')
@@ -348,8 +349,8 @@ plt.show()
 # CROSS VALIDATED NAIVE BAYES
 # Feature Engineering
 
-#running features through decision tree to determine relevant features
-decisionModel = DecisionTreeClassifier(max_depth=10) #max depth = 10
+# running features through decision tree to determine relevant features with optimal tree depth
+decisionModel = DecisionTreeClassifier(max_depth=10) 
 decisionModel = decisionModel.fit(features, labels)
 importance = decisionModel.feature_importances_
 
@@ -410,8 +411,8 @@ plt.show()
 
 # CROSS VALIDATED BOOTSTRAP
 
-# running features through decision tree to determine relevant features
-decisionModel = DecisionTreeClassifier(max_depth=13) #bootstrap depth = 13
+# running features through decision tree to determine relevant features with optimal tree depth
+decisionModel = DecisionTreeClassifier(max_depth=13)
 decisionModel = decisionModel.fit(bootstrap_features, bootstrap_labels)
 importance = decisionModel.feature_importances_
 
@@ -454,7 +455,7 @@ roc_auc = roc_auc_score(BY_test, BY_pred)
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
 
 # Confusion Matrix subplot
-cmatrix = ConfusionMatrixDisplay.from_predictions(NY_test, NY_pred, ax=ax1)
+cmatrix = ConfusionMatrixDisplay.from_predictions(BY_test, BY_pred, ax=ax1)
 ax1.set_title(' CV Bootstrap Confusion Matrix')
 fpr, tpr, thresholds = roc_curve(BY_test, BY_pred)
 roc_auc = roc_auc_score(BY_test, BY_pred)
