@@ -44,21 +44,21 @@ Feature engineering will be plotted on a bar graph showing each feature and the 
   
   *Cross-Validation*
   
-  *Visualizations*
-  
-  *Helper Functions*
+**4. Visualizations**
+
+**5. Helper Functions**
   
 **Dependencies**
 
 The project relies on the following Python libraries:
 
-urlopen from urllib.request: For working with URLs.
+*urlopen from urllib.request*: For working with URLs.
 
-numpy (np alias): A library for numerical operations and array manipulations.
+*numpy (np alias)*: A library for numerical operations and array manipulations.
 
-pyplot from matplotlib: A library for creating visualizations, used here for plotting.
+*pyplot from matplotlib*: A library for creating visualizations, used here for plotting.
 
-sklearn: A machine learning library used for metrics, decision tree models, naive Bayes models, visualization, ensemble methods, and cross-validation.
+*sklearn*: A machine learning library used for metrics, decision tree models, naive Bayes models, visualization, ensemble methods, and cross-validation.
 
 ***Code Structure***
 
@@ -69,23 +69,23 @@ The project loads data from a file using np.loadtxt and processes it into featur
 
 **2. Preprocessing and Feature Engineering**
 
-Feature Importance Analysis
+*Feature Importance Analysis*
 
 The code uses a decision tree to determine feature importance and selects relevant features.
 
-Feature Selection
+*Feature Selection*
 
 The selected features are then used to train a naive Bayes model after applying feature selection.
 
 **3. Model Training and Evaluation**
 
-Naive Bayes
+*Naive Bayes*
 
 The project trains a Multinomial Naive Bayes model on the selected features.
 
 Evaluates the model using a confusion matrix, metrics, and a ROC curve.
 
-Bootstrap
+*Bootstrap*
 
 Utilizes bootstrap resampling to create multiple datasets.
 
@@ -93,19 +93,19 @@ Trains a Multinomial Naive Bayes model on each dataset.
 
 Evaluates and visualizes the ensemble model's performance.
 
-Bagging
+*Bagging*
 
 Applies bagging by training multiple naive Bayes models on bootstrapped datasets.
 
 Combines predictions and evaluates the ensemble model's performance.
 
-AdaBoost
+*AdaBoost*
 
 Uses AdaBoost to boost the performance of a decision tree.
 
 Trains the model and evaluates its performance.
 
-Cross-Validation
+*Cross-Validation*
 
 Evaluates naive Bayes and bootstrap models using k-fold cross-validation.
 
@@ -119,7 +119,7 @@ Generates visualizations, including feature importance bar plots, confusion matr
 
 confusion_matrix_metrics: A helper function to display confusion matrix metrics.
 
-**6. Execution**
+**Execution**
 
 To run the project, ensure the required dependencies are installed. You can then execute the code in a Python environment.
 
