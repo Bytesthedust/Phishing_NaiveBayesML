@@ -111,19 +111,20 @@ Evaluates naive Bayes and bootstrap models using k-fold cross-validation.
 
 Plots the mean accuracy across different tree depths.
 
-4. Visualizations
+**4. Visualizations**
 
 Generates visualizations, including feature importance bar plots, confusion matrices, ROC curves, and more.
 
-5. Helper Functions
+**5. Helper Functions**
 
 confusion_matrix_metrics: A helper function to display confusion matrix metrics.
 
-6. Execution
+**6. Execution**
 
 To run the project, ensure the required dependencies are installed. You can then execute the code in a Python environment.
 
 Note: Replace "insert file path" in the data import section with the actual file path.
 
-Conclusion
+***Conclusion***
+
 This project demonstrates the application of various machine learning techniques for email phishing detection, providing insights into feature importance, model performance, and ensemble methods. Users can adapt and extend the code for similar classification tasks.
