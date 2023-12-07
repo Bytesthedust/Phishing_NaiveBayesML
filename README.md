@@ -15,4 +15,7 @@ The source of the data comes from the â€œPhishing Dataset for Machine Learningâ€
 **Visualization**
 Feature engineering will be plotted on a bar graph showing each feature and the amount of relevance they have on the model. A confusion matrix and a ROC curve will be plotted to visualize the data
 
-**Documentation**
+**Links**
+*Data:* https://www.kaggle.com/datasets/shashwatwork/phishing-dataset-for-machine-learning/data?select=Phishing_Legitimate_full.csv
+*Powerpoint:* https://1drv.ms/p/s!Aml3lvs97HXdgaBxa4hi9sMIsVEvvw?e=9cEXEI
+*Colaboratory:* https://colab.research.google.com/drive/1ky1G8uxnjEQHNCgHH63nwh7pxCkGc9II?usp=sharing
