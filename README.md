@@ -25,26 +25,41 @@ Feature engineering will be plotted on a bar graph showing each feature and the 
 
 *Colaboratory:* https://colab.research.google.com/drive/1ky1G8uxnjEQHNCgHH63nwh7pxCkGc9II?usp=sharing
 
-
 **Documentation**
+
+
 1. Data Import
-Preprocessing and Feature Engineering
-Model Training and Evaluation
-Naive Bayes
-Bootstrap
-Bagging
-AdaBoost
-Cross-Validation
-Visualizations
-Helper Functions
-Dependencies
+2. Preprocessing and Feature Engineering
+3. Model Training and Evaluation
+  Naive Bayes
+
+  Bootstrap
+  
+  Bagging
+  
+  AdaBoost
+  
+  Cross-Validation
+  
+  Visualizations
+  
+  Helper Functions
+  
+**Dependencies**
+
 The project relies on the following Python libraries:
 
 urlopen from urllib.request: For working with URLs.
+
 numpy (np alias): A library for numerical operations and array manipulations.
+
 pyplot from matplotlib: A library for creating visualizations, used here for plotting.
+
 sklearn: A machine learning library used for metrics, decision tree models, naive Bayes models, visualization, ensemble methods, and cross-validation.
-Code Structure
+
+**Code Structure**
+
+
 1. Data Import
 The project loads data from a file using np.loadtxt and processes it into feature and label arrays.
 
@@ -56,26 +71,34 @@ Feature Selection
 The selected features are then used to train a naive Bayes model after applying feature selection.
 
 3. Model Training and Evaluation
+
 Naive Bayes
 The project trains a Multinomial Naive Bayes model on the selected features.
 Evaluates the model using a confusion matrix, metrics, and a ROC curve.
+
 Bootstrap
 Utilizes bootstrap resampling to create multiple datasets.
 Trains a Multinomial Naive Bayes model on each dataset.
 Evaluates and visualizes the ensemble model's performance.
+
 Bagging
 Applies bagging by training multiple naive Bayes models on bootstrapped datasets.
 Combines predictions and evaluates the ensemble model's performance.
+
 AdaBoost
 Uses AdaBoost to boost the performance of a decision tree.
 Trains the model and evaluates its performance.
+
 Cross-Validation
 Evaluates naive Bayes and bootstrap models using k-fold cross-validation.
 Plots the mean accuracy across different tree depths.
-4. Visualizations
+
+5. Visualizations
 Generates visualizations, including feature importance bar plots, confusion matrices, ROC curves, and more.
-5. Helper Functions
+
+7. Helper Functions
 confusion_matrix_metrics: A helper function to display confusion matrix metrics.
+
 Execution
 To run the project, ensure the required dependencies are installed. You can then execute the code in a Python environment.
 
